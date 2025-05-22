@@ -25,7 +25,7 @@ export default function QRGeneratorTool({
       a.download = 'qr-code.png';
       a.click();
     } catch (err) {
-      console.error('QR 다운로드 실패:', err);
+      console.error('qr code download failed:', err);
     }
   };
 
@@ -40,7 +40,7 @@ export default function QRGeneratorTool({
         setInput={setInput}
         inputComponent={
           <ToolTextInput
-            title="QR 코드에 들어갈 텍스트"
+            title="Input Text"
             value={input}
             onChange={setInput}
             hideFileImport
@@ -58,12 +58,12 @@ export default function QRGeneratorTool({
               onClick={handleDownload}
               className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
             >
-              QR 코드 다운로드
+              Image Download
             </button>
           </div>
         }
         toolInfo={{
-          title: 'QR 코드 생성기란?',
+          title: 'What is a qr code generator?',
           description: longDescription
         }}
         exampleCards={[]}
@@ -71,7 +71,7 @@ export default function QRGeneratorTool({
 
       <div className="mt-12">
         <h2 className="text-2xl font-semibold text-center mb-6">
-          QR 코드 예시 미리보기
+          QR Code Example Preview
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {[
