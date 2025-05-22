@@ -101,8 +101,8 @@ export default function ToolContent<T extends FormikValues, I>({
                 onValuesChange={onValuesChange}
               />
 
-              {/* meta 파일의 name 속성이 QR 코드 생성기일 때만 ToolOptions 숨기기 */}
-              {title !== 'Qr Code Generator' && (
+              {/* meta 파일의 name 속성이 QR 코드 생성기 혹은 텍스트 차이 비교기일 때 ToolOptions 숨기기 */}
+              {!['Qr Code Generator', 'Text Diff Checker'].includes(title) && (
                 <ToolOptions getGroups={getGroups} vertical={verticalGroups} />
               )}
 

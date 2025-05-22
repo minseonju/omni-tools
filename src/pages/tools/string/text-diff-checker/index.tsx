@@ -65,9 +65,9 @@ export default function TextDiffCheckerTool({
       compute={() => {}}
       inputComponent={
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <ToolTextInput title="왼쪽 텍스트" value={left} onChange={setLeft} />
+          <ToolTextInput title="Left Input" value={left} onChange={setLeft} />
           <ToolTextInput
-            title="오른쪽 텍스트"
+            title="Right Input"
             value={right}
             onChange={setRight}
           />
@@ -85,7 +85,7 @@ export default function TextDiffCheckerTool({
         </div>
       }
       toolInfo={{
-        title: '텍스트 비교 도구란?',
+        title: 'what is the text diff checker?',
         description: longDescription
       }}
     />
