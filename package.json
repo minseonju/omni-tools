@@ -43,6 +43,7 @@
     "browser-image-compression": "^2.0.2",
     "color": "^4.2.3",
     "dayjs": "^1.11.13",
+    "diff": "^8.0.1",
     "formik": "^2.4.6",
     "html-to-image": "^1.11.13",
     "jimp": "^0.22.12",

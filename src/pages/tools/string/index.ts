@@ -15,6 +15,7 @@ import { tool as stringReplace } from './text-replacer/meta';
 import { tool as stringRepeat } from './repeat/meta';
 import { tool as stringTruncate } from './truncate/meta';
 import { tool as stringQrGenerator } from './qr-generator/meta';
+import { tool as stringTextDiffChecker } from './text-diff-checker/meta';
 
 export const stringTools = [
   stringSplit,
@@ -33,5 +34,6 @@ export const stringTools = [
   stringQuote,
   stringRotate,
   stringRot13,
-  stringQrGenerator
+  stringQrGenerator,
+  stringTextDiffChecker
 ];
