@@ -4,11 +4,13 @@ import { lazy } from 'react';
 
 export const tool = defineTool('string', {
   path: 'qr-generator',
-  name: 'QR 코드 생성기',
-  icon: 'proicons:quote',
-  description: '텍스트를 QR 코드로 변환합니다.',
-  shortDescription: 'QR 코드 생성',
-  longDescription: '입력한 문자열을 QR 코드로 생성하는 도구입니다.',
+  name: 'Qr Code Generator',
+  icon: 'material-symbols:qr-code',
+  description:
+    'Convert any text into a scannable QR code instantly, and download it as a PNG image for easy sharing and use anywhere.',
+  shortDescription: 'Create QR Code',
+  longDescription:
+    'The QR code generator is a tool that generates QR codes in real time based on text entered by the user. The generated QR code can contain various information such as website addresses, contacts, and messages, and can be used for various purposes by downloading images.',
   keywords: ['qr', 'code', 'generator', 'string', '텍스트'],
   component: lazy(() => import('./index'))
 });

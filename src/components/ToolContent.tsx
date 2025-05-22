@@ -102,7 +102,7 @@ export default function ToolContent<T extends FormikValues, I>({
               />
 
               {/* meta 파일의 name 속성이 QR 코드 생성기일 때만 ToolOptions 숨기기 */}
-              {title !== 'QR 코드 생성기' && (
+              {title !== 'Qr Code Generator' && (
                 <ToolOptions getGroups={getGroups} vertical={verticalGroups} />
               )}
 
