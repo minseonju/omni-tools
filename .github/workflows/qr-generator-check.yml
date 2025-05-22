@@ -32,5 +32,8 @@ jobs:
       - name: QR Generator 컴포넌트 확인 (파일 존재 여부 테스트)
         run: test -f src/pages/tools/string/qr-generator/index.tsx
 
+      - name: Text Diff Checker 컴포넌트 확인 (파일 존재 여부 테스트)
+        run: test -f src/pages/tools/string/text-diff-checker/index.tsx
+
       - name: 빌드 성공 메시지 출력
         run: echo "QR Generator 기능 및 전체 프로젝트 실행 확인 완료!"
