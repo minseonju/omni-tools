@@ -1,165 +1,70 @@
 <div align="center">
         <img src="src/assets/logo.png" width="300" />
         <br /><br />
-<a href="https://trendshift.io/repositories/13055" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13055" alt="iib0011%2Fomni-tools | Trendshift" style="width: 200px;" width="200"/></a>
-   <br /><br />
-<a href="https://github.com/iib0011/omni-tools/releases">
-          <img src="https://img.shields.io/badge/version-0.3.0-blue?style=for-the-badge" />
-        </a>
-        <a href="https://hub.docker.com/r/iib0011/omni-tools">
-          <img src="https://img.shields.io/docker/pulls/iib0011/omni-tools?style=for-the-badge&logo=docker" />
-        </a>
-        <a href="https://github.com/iib0011">
-          <img src="https://img.shields.io/github/stars/iib0011/omni-tools?style=for-the-badge&logo=github" />
-        </a>
-        <a href="https://github.com/iib0011/omni-tools/blob/main/LICENSE">
-          <img src="https://img.shields.io/github/license/iib0011/omni-tools?style=for-the-badge" />
-        </a>
-        <a href="https://discord.gg/SDbbn3hT4b">
-          <img src="https://img.shields.io/discord/1342971141823664179?label=Discord&style=for-the-badge" />
-        </a>
-        <br /><br />
+<img width="1235" alt="스크린샷 2025-05-26 오후 7 25 03" src="https://github.com/user-attachments/assets/7aa73c35-3332-46ad-87d3-5a56eb3a5598" />
+
 </div>
 
-Welcome to OmniTools, a self-hosted web app offering a variety of online tools to simplify everyday tasks.
-Whether you are coding, manipulating images/videos, PDFs or crunching numbers, OmniTools has you covered. Please don't
-forget to
-star the repo to support us.
-Here is the [demo](https://omnitools.app) website.
+OmniTools는 일상 업무를 간편하게 만들어주는 다양한 온라인 도구를 제공하는 자체 호스팅 웹 애플리케이션입니다.
+코딩, 이미지/비디오 처리, PDF 변환, 숫자 계산 등 다양한 작업을 웹에서 손쉽게 처리할 수 있도록 지원합니다.
 
-![img.png](img.png)
+이번에 OmniTools에 다음 두 가지 도구가 새롭게 추가되었습니다:
 
-## Table of Contents
+- QR 코드 생성기(QrCodeGenerator): URL이나 일반 텍스트를 입력하면 QR 코드 이미지를 생성해주는 도구
+- 텍스트 비교기(Text Diff Checker): 두 입력값의 차이점을 하이라이팅해 시각적으로 비교할 수 있는 도구
 
-- [Features](#features)
-- [Self-host](#self-hostrun)
-- [Contribute](#contribute)
-- [License](#license)
-- [Contact](#contact)
 
-## Features
 
-We strive to offer a variety of tools, including:
 
-## **Image/Video/Binary Tools**
+## Requirements
 
-- Image Resizer
-- Image Converter
-- Video Trimmer
-- Video Reverser
-- And more...
 
-## **String/List Tools**
 
-- Case Converters
-- List Shuffler
-- Text Formatters
-- And more...
+## Docker image
 
-## **Date and Time Tools**
 
-- Date Calculators
-- Time Zone Converters
-- And more...
 
-## **Math Tools**
+## Docker container
 
-- Generate Prime Numbers
-- Generate Perfect Numbers
-- And more...
+## How to exit
 
-## **Miscellaneous Tools**
 
-- JSON Tools
-- PDF Tools
-- CSV Tools
-- And more...
-
-Stay tuned as we continue to expand and improve our collection!
-
-## Self-host/Run
-
-### Docker
+## Directory Structure
 
 ```bash
-docker run -d --name omni-tools --restart unless-stopped -p 8080:80 iib0011/omni-tools:latest
+omni-tools/
+├── .github/                     # GitHub Actions 및 워크플로우 설정
+├── .idea/                       # JetBrains IDE 설정 파일
+├── .vitest/                     # Vitest 테스트 설정
+├── .vscode/                     # VSCode 편집기 설정
+├── @types/                      # 프로젝트 전역 타입 정의
+├── public/                      # 정적 파일(이미지, 아이콘 등)
+├── scripts/                     # 빌드 및 배포 스크립트
+├── src/                         # 주요 소스 코드
+│   └── pages/
+│       └── tools/
+│           └── string/
+│               ├── qr-generator/        # QR 코드 생성기 도구
+│               │   ├── index.tsx        # 주요 기능 컴포넌트
+│               │   ├── service.ts       # 외부 API 정의
+│               │   └── meta.ts          # 도구 메타 정보 정의
+│               │  
+│               └── text-diff-checker/   # 텍스트 비교 도구
+│ 
+├── .dockerignore                # Docker 빌드 제외 파일 목록
+├── .editorconfig                # 코드 스타일 설정
+├── .eslintrc                    # ESLint 설정
+├── .gitignore                   # Git 추적 제외 파일 목록
+├── .prettierrc                  # Prettier 코드 포맷 설정
+├── Dockerfile                   # Docker 이미지 빌드 설정
+├── LICENSE                      # 프로젝트 라이선스
+├── README.md                    # 프로젝트 설명 파일
+├── img.png                      # 프로젝트 이미지
+├── index.html                   # 기본 HTML 템플릿
+├── package-lock.json            # 의존성 버전 고정 파일
+├── package.json                 # 프로젝트 메타 정보 및 의존성 목록
+
 ```
-
-### Docker Compose
-
-```yaml
-services:
-  omni-tools:
-    image: iib0011/omni-tools:latest
-    container_name: omni-tools
-    restart: unless-stopped
-    ports:
-      - "8080:80"
-
-```
-
-## Contribute
-
-This is a React Project with Typescript Material UI. We use icons from [Iconify](https://icon-sets.iconify.design)
-
-### Project setup
-
-```bash
-git clone https://github.com/iib0011/omni-tools.git
-cd omni-tools
-npm i
-npm run dev
-```
-
-### Create a new tool
-
-```bash
-npm run script:create:tool my-tool-name folder1 # npm run script:create:tool split pdf
-```
-
-For tools located under multiple nested directories, use:
-
-```bash
-npm run script:create:tool my-tool-name folder1/folder2 # npm run script:create:tool compress image/png
-```
-
-Use `folder1\folder2` on Windows.
-
-### Run tests
-
-```bash
-npm run test
-```
-
-- For e2e tests
-
-```bash
-npm run test:e2e
-```
-
-<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date"/>
-
-## 🤝 Looking to contribute?
-
-We welcome contributions! You can help by:
-
-- ✅ Reporting bugs
-- ✅ Suggesting new features in Github issues or [here](https://tally.so/r/nrkkx2)
-- ✅ Improving documentation
-- ✅ Submitting pull requests
-
-You can also join our [Discord server](https://discord.gg/SDbbn3hT4b)
-
-### Contributors
-
-<a href="https://github.com/iib0011/omni-tools/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=iib0011/omni-tools" />
-</a>
-
-## Contact
-
-For any questions or suggestions, feel free to open an issue or contact me at:
-[ibracool99@gmail.com](mailto:ibracool99@gmail.com)
 
 ## License
 
