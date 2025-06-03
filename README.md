@@ -48,22 +48,32 @@ OmniTools는 일상 업무를 간편하게 만들어주는 다양한 온라인 �
 ## How to RUN
 
 1. Docker image 불러오기
+```bash
 docker load -i final2023040010:v1.tar
+```
 
 2. 컨테이너 실행
+```bash
 docker run -d -p 3000:80 --name omni-running final2023040010:v1
+```
 
 3. 결과 확인
+```bash
 curl http://localhost:3000
+```
 
 4. 포트 열기(선택 사항)
+```bash
 sudo ufw allow 3000/tcp      # Ubuntu 기준
 sudo ufw reload
 
 http://<서버IP>:3000
+```
 
 5. 종료
+```bash
 docker rm -f omni-running
+```
 
 ## Directory Structure
 
