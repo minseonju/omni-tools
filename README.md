@@ -46,14 +46,15 @@ OmniTools는 일상 업무를 간편하게 만들어주는 다양한 온라인 �
 > 전체 패키지 목록은 [`package.json`](./package.json)을 참고해 주세요.
 
 ## How to RUN
-1. 경로 이동
-```bash
-cd omni-tools
-```
 
-2. Docker image 불러오기
+1. Docker image 불러오기
 ```bash
 docker load -i final2023040010:v1.tar
+```
+
+2. 경로 이동
+```bash
+cd omni-tools
 ```
 
 3. 컨테이너 실행
