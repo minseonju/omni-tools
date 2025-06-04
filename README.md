@@ -46,28 +46,29 @@ OmniTools는 일상 업무를 간편하게 만들어주는 다양한 온라인 �
 > 전체 패키지 목록은 [`package.json`](./package.json)을 참고해 주세요.
 
 ## How to RUN
+1. 경로 이동
+```bash
+cd omni-tools
+```
 
-1. Docker image 불러오기
+2. Docker image 불러오기
 ```bash
 docker load -i final2023040010:v1.tar
 ```
 
-2. 컨테이너 실행
+3. 컨테이너 실행
 ```bash
-docker run -d -p 3000:80 --name omni-running final2023040010:v1
+docker run -d -p 10200:80 --name omni-running final2023040010:v1
 ```
 
-3. 결과 확인
+4. 서버 작동 확인
 ```bash
-curl http://localhost:3000
+curl http://localhost:10200
 ```
 
-4. 포트 열기(선택 사항)
+5. 포트 열기(브라우저에서 웹 사이트 접속)
 ```bash
-sudo ufw allow 3000/tcp      # Ubuntu 기준
-sudo ufw reload
-
-http://<서버IP>:3000
+http://<서버IP>:10200
 ```
 
 5. 종료
