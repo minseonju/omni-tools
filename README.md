@@ -49,7 +49,7 @@ OmniTools는 일상 업무를 간편하게 만들어주는 다양한 온라인 �
 
 1. Docker image 불러오기
 ```bash
-docker load -i final2023040010:v1.tar
+docker load -i final_2023040010:v1.tar
 ```
 
 2. 경로 이동
@@ -59,7 +59,7 @@ cd omni-tools
 
 3. 컨테이너 실행
 ```bash
-docker run -d -p 10200:80 --name omni-running final2023040010:v1
+docker run -d -p 10200:80 --name omni-running final_2023040010:v1
 ```
 
 4. 서버 작동 확인
